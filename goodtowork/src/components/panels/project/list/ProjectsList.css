@@ -1,0 +1,25 @@
+.ProjectsList-wrapper {
+  padding: 10px;
+}
+
+.ProjectsListRow-wrapper {
+  margin-bottom: 5px;
+}
+
+.ProjectsListRow-separator {
+  width: 2px;
+  background-color: rgb(141, 141, 141);
+}
+
+.ProjectsListRow-columnsdefinitions {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+}
+
+.ProjectsListRow-column {
+  height: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

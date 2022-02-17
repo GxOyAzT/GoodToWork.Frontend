@@ -1,0 +1,1 @@
+export function BaseAddress () : string { return 'https://localhost:61890/api' }

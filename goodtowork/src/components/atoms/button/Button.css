@@ -1,0 +1,12 @@
+.Button-wrapper {
+  max-width: 200px;
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.Button-wrapper:hover {
+  opacity: 0.7;
+}

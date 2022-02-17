@@ -1,0 +1,11 @@
+.ProjectCreatePanel-wrapper {
+  padding-top: 50px;
+  height: 100%;
+  width: 300px;
+  margin: auto;
+  align-items: center;
+}
+
+.ProjectCreatePanel-boxspace {
+  height: 10px;
+}
