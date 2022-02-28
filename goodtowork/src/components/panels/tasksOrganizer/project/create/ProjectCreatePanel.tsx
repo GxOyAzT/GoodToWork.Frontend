@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
-import TextInput from '../../../atoms/text/TextInput'
-import TestAreaInput from '../../../atoms/textArea/TestAreaInput'
-import Button from '../../../atoms/button/Button'
+import React, { useState, useContext } from 'react'
+import TextInput from '../../../../atoms/text/TextInput'
+import TestAreaInput from '../../../../atoms/textArea/TestAreaInput'
+import Button from '../../../../atoms/button/Button'
 import './ProjectCreatePanel.css'
-import { PostData } from '../../../../data/post/PostData'
+import { PostData } from '../../../../../data/post/PostData'
 import { useNavigate } from 'react-router-dom'
-import { ProjectBaseDto } from '../../../../models/dtos/project/ProjectBaseDto'
+import { ProjectBaseDto } from '../../../../../models/dtos/project/ProjectBaseDto'
+import { UserContext } from '../../../../../contexts/user/UserContext'
 
 function ProjectCreatePanel() {
   const [projectName, setProjectName] = useState<string>('')
@@ -14,12 +15,14 @@ function ProjectCreatePanel() {
   function setprojectNameWrapper(newValue : string) { setProjectName(newValue) }
   function setprojectDescriptionWrapper(newValue : string) { setProjectDescription(newValue) }
 
+  const userContext = useContext(UserContext)
+
   let navigate = useNavigate();
   async function PostForm() {
     const newProjectModel = {
       Name: projectName,
       Description: projectDescription,
-      SenderId: '00000000-0000-0000-0000-000000000001'
+      SenderId: userContext?.userId
     }
 
     var result = await PostData<ProjectBaseDto>('project/create', newProjectModel)

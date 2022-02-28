@@ -7,4 +7,5 @@ export type ProjectBaseDto = Dto & {
   description: string | null,
   created: Date | null,
   coworkersCount?: number | null
+  moderatorIds: string[]
 }

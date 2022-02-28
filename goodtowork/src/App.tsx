@@ -1,28 +1,20 @@
-import React from 'react';
 import './App.css';
-import HomePanel from './components/panels/home/HomePanel'
-import ProjectCreatePanel from './components/panels/project/create/ProjectCreatePanel'
-import ProjectEditPanel from './components/panels/project/edit/ProjectEditPanel'
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
-import ProjectsList from './components/panels/project/list/ProjectsListPanel';
+import { UserContextProvider } from './contexts/user/UserContext'
+import Navbar from './components/panels/main/navbar/Navbar'
+import Screen from './components/panels/main/screen/Screen'
+
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <UserContextProvider>
       <Router>
-        <Routes>
-            <Route path="/home" element={<HomePanel/>}/>
-
-            <Route path="/projects" element={<ProjectsList/>}/>
-            <Route path="/projects/create" element={<ProjectCreatePanel/>}/>
-            <Route path="/projects/edit/:id" element={<ProjectEditPanel/>}/>
-        </Routes>
+        <div className="App" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', height: '100%' }}>
+          <Navbar/>
+          <Screen/>
+        </div>
       </Router>
-    </div>
+    </UserContextProvider>
   );
 }
 

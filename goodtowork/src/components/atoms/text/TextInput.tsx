@@ -1,4 +1,3 @@
-import React from 'react'
 import './TextInput.css'
 
 export type TextInputInput = {
@@ -12,7 +11,7 @@ function TextInput(props: TextInputInput) {
     <div className='TextInput-warpper'>
       <div className='TextInput-title noselect'>{props.Title}</div>
       <div className='TextInput-topSpace'></div>
-      <input className='TextInput-input' type='text' value={props.ActualValue} onChange={e => props.OnChange(e.target.value)}/>
+      <input readOnly={props.OnChange == null} className='TextInput-input' type='text' value={props.ActualValue} onChange={e => props.OnChange(e.target.value)}/>
     </div>
   )
 }
