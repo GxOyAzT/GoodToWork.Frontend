@@ -1,4 +1,5 @@
 import React from 'react'
+import './List.css'
 
 export type ListInput = {
   rows: React.ReactNode[]
@@ -6,9 +7,9 @@ export type ListInput = {
 
 const List = (props: ListInput) => {
   return (
-    <div style={{ border: '1px black solid', height: '100%', width: '100%', padding: 3 }}>
+    <div className='List-wrapper'>
       { 
-        props.rows.map(row => <div style={{ border: '1px black solid', minWidth: 30 }}>{row}</div>) 
+        props.rows.map(row => <div className='List-row'>{row}</div>) 
       }
     </div>
   )

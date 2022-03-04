@@ -1,0 +1,17 @@
+.ProblemDetailPanel-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  height: 100%;
+}
+
+.ProblemDetailPanel-comments-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 20px auto;
+  width: 95%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  max-height: 700px;
+}

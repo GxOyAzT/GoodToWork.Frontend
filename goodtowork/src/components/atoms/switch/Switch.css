@@ -1,0 +1,21 @@
+.Switch-wrapper {
+  background: white;
+  height: 20px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.Switch-line-left {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: var(--main-color-light);
+}
+
+.Switch-line-right {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: var(--main-color);
+  transform: translateX(30px);
+}

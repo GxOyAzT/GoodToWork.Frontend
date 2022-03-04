@@ -37,15 +37,15 @@ function ProjectCreatePanel() {
   return (
     <div className='ProjectCreatePanel-wrapper'>
       <div>
-        <TextInput Title='PROJECT NAME' ActualValue={projectName} OnChange={setprojectNameWrapper} />
+        <TextInput title='PROJECT NAME' actualValue={projectName} onChange={setprojectNameWrapper} />
       </div>
       <div className='ProjectCreatePanel-boxspace'></div>
       <div>
-        <TestAreaInput Title='DESCRIPTION' ActualValue={projectDescription} OnChange={setprojectDescriptionWrapper} />
+        <TestAreaInput title='DESCRIPTION' actualValue={projectDescription} onChange={setprojectDescriptionWrapper} />
       </div>
       <div className='ProjectCreatePanel-boxspace'></div>
       <div>
-        <Button Title='SAVE' Background='green' OnClick={() => PostForm()}/>
+        <Button title='SAVE' background='green' onClick={() => PostForm()}/>
       </div>
     </div>
   )

@@ -1,4 +1,6 @@
 .ProjectsList-wrapper {
+  display: grid;
+  grid-template-rows: 30px 1fr;
   padding: 10px;
 }
 
@@ -14,7 +16,7 @@
 .ProjectsListRow-columnsdefinitions {
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .ProjectsListRow-column {
@@ -22,4 +24,9 @@
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.ProjectsList-top {
+  display: grid;
+  grid-template-columns: 1fr auto 5px auto;
 }

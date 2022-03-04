@@ -1,7 +1,14 @@
 import { useState, useContext } from 'react'
+
 import { FetchData } from '../../../../../data/fetch/FetchData'
 import { UserContext } from '../../../../../contexts/user/UserContext'
+
 import { CommentBaseModelDto } from '../../../../../models/dtos/comment/CommentBaseModelDto'
+
+import TextAreaInput from '../../../../atoms/textArea/TestAreaInput'
+import Button from '../../../../atoms/button/Button'
+
+import './CommentCreatePanel.css'
 
 type CommentCreatePanelInput = {
   ProblemId: string
@@ -27,9 +34,13 @@ const CommentCreatePanel = (props: CommentCreatePanelInput) => {
 
   return (
     <div>
-      <textarea value={comment} onChange={e => setComment(e.target.value)}></textarea>
+      <div>
+        <TextAreaInput title='COMMENT' actualValue={comment} onChange={newVal => setComment(newVal)}/>
+      </div>
       <br/>
-      <button onClick={() => createCommand()}>ADD</button>
+      <div>
+        <Button onClick={() => createCommand()} title='SEND'/>
+      </div>
     </div>
   )
 }

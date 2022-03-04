@@ -1,0 +1,27 @@
+.Comment-wrapper {
+  background: white;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.Comment-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+}
+
+.Comment-header-time {
+  text-align: right;
+}
+
+.Comment-content {
+  margin: 3px;
+}
+
+.CommentListPanel-wrapper {
+  overflow-y: scroll;
+}
+
+.CommentListPanel-wrapper::-webkit-scrollbar {
+  display: none;
+}

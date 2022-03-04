@@ -71,17 +71,17 @@ function ProjectEditPanel() {
     <div className='ProjectEditPanel-wrapper'>
       <div>
         <div>
-          <TextInput Title='ID' ActualValue={projectId ?? ''} OnChange={() => {}} />
+          <TextInput title='ID' actualValue={projectId ?? ''} onChange={() => {}} />
         </div>
         <div>
-          <TextInput Title='PROJECT NAME' ActualValue={name} OnChange={setName} />
+          <TextInput title='PROJECT NAME' actualValue={name} onChange={setName} />
         </div>
         <div className='ProjectCreatePanel-boxspace'></div>
         <div>
-          <TestAreaInput Title='DESCRIPTION' ActualValue={description ?? ''} OnChange={setDescription} />
+          <TestAreaInput title='DESCRIPTION' actualValue={description ?? ''} onChange={setDescription} />
         </div>
         <div>
-          <TextInput Title='CREATION DATE' ActualValue={created} OnChange={() => {}} />
+          <TextInput title='CREATION DATE' actualValue={created} onChange={() => {}} />
         </div>
       </div>
       <div>

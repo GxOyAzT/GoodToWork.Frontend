@@ -1,0 +1,15 @@
+.List-wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 3;
+}
+
+.List-row {
+  min-width: 30;
+  background: white;
+  border-radius: 10px;
+}
+
+.List-row:hover {
+  background: #e9e8e0;
+}

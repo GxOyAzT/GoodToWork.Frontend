@@ -1,0 +1,8 @@
+.Screen-main {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.Screen-main::-webkit-scrollbar {
+  display: none;
+}

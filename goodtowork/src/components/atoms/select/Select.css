@@ -1,0 +1,13 @@
+.Select-option {
+  display: inline-block;
+  margin: 2px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border: 2px solid var(--main-color-light)
+}
+
+.Select-option-selected {
+  background: var(--main-color);
+  color: white;
+}

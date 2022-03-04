@@ -7,6 +7,7 @@ import { FetchData } from '../../../../../data/fetch/FetchData'
 import { UserContext } from '../../../../../contexts/user/UserContext'
 import CommentCreatePanel from '../../comment/create/CommentCreatePanel'
 import CommentListPanel from '../../comment/list/CommentListPanel'
+import './ProblemDetailPanel.css'
 
 const ProblemDetailPanel = () => {
   const [problem, setProblem] = useState<ProblemDetailModelDto>({ id: '', projectId: '', title: '', description: '', created: '', creatorName: '', performerName: '', problemStatus: 0, comments: [], statuses: []  })
@@ -43,10 +44,9 @@ const ProblemDetailPanel = () => {
   }
 
   return (
-    <div>
-      <div>ProblemDetailPanel</div>
+    <div className='ProblemDetailPanel-wrapper'>
       <div>
-        {
+      {
           problem != null ?
           <div>
             <div>
@@ -88,15 +88,16 @@ const ProblemDetailPanel = () => {
             <br/>
             <br/>
 
-            <div>
-              <div>Comments:</div>
-              <CommentListPanel Comments={problem.comments}/>
-              <CommentCreatePanel OnSuccess={addComment} ProblemId={problemId ?? ''}/>
-            </div>
+            
           </div>
           :
           <></>
         }
+      </div>
+      <div className='ProblemDetailPanel-comments-wrapper'>
+        <CommentListPanel comments={problem.comments}/>
+        <div></div>
+        <CommentCreatePanel OnSuccess={addComment} ProblemId={problemId ?? ''}/>
       </div>
     </div>
   )
