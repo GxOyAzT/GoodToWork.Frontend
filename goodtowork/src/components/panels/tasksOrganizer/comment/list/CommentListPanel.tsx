@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { useRef } from 'react'
 import { CommentBaseModelDto } from '../../../../../models/dtos/comment/CommentBaseModelDto'
 
 import './CommentListPanel.css'
@@ -7,11 +10,18 @@ type CommentListPanelInput = {
 }
 
 const CommentListPanel = (props: CommentListPanelInput) => {
+  const commentPanelRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    commentPanelRef.current?.scrollIntoView({ behavior: "smooth" })
+  })
+
   return (
     <div className='CommentListPanel-wrapper'>
     {
-      props.comments.map(comment => <Comment comment={comment}/>)
+      props.comments.map(comment => <Comment key={comment.id} comment={comment}/>)
     }
+    <div ref={commentPanelRef}/>
     </div>
   )
 }
